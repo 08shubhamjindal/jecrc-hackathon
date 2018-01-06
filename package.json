@@ -1,0 +1,22 @@
+{
+  "name": "jecrc-hackathon.github.io",
+  "version": "1.0.0",
+  "description": "JECRC Hackathon App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/08shubhamjindal/jecrc-hackathon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/08shubhamjindal/jecrc-hackathon/issues"
+  },
+  "homepage": "https://github.com/08shubhamjindal/jecrc-hackathon#readme",
+  "devDependencies": {
+    "express": "^4.16.2"
+  }
+}
