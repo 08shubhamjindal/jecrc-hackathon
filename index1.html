@@ -180,6 +180,13 @@ after { clear: both; }
 });
 }
 </script>
+<script>
+firebase.auth().onAuthStateChanged(user => {
+  if(user) {
+    window.location = 'https://www.facebook.com/';
+  }
+});
+</script>
 
 </body>
 </html>
