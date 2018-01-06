@@ -178,12 +178,14 @@ after { clear: both; }
   console.log(error.code);
   console.log(error.message);
 });
+
 }
 </script>
 <script>
 firebase.auth().onAuthStateChanged(user => {
   if(user) {
-    window.location = 'https://www.facebook.com/';
+    console.log(user)
+    window.location.href = 'http://localhost:3000/facebook.html';
   }
 });
 </script>

@@ -5,9 +5,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700">
     <style>
     @charset "utf-8";
-@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+    @import url(http://weloveiconfonts.com/api/?family=fontawesome);
 
-[class*="fontawesome-"]:before {
+   [class*="fontawesome-"]:before {
   font-family: 'FontAwesome', sans-serif;
 }
 
@@ -367,7 +367,8 @@ textEffect('fly-in-out');
     <script>
 firebase.auth().onAuthStateChanged(user => {
   if(user) {
-    window.location = 'https://www.facebook.com/';
+     console.log(user)
+    window.location.href = 'http://localhost:3000/signout.html';
   }
 });
 </script>
