@@ -6,7 +6,6 @@
     <style>
     @charset "utf-8";
 @import url(http://weloveiconfonts.com/api/?family=fontawesome);
-
 [class*="fontawesome-"]:before {
   font-family: 'FontAwesome', sans-serif;
 }
@@ -282,8 +281,7 @@ i.fly-in-out {
            <br><br/>
            <span class="fontawesome-google-plus-sign"></span>
           <button type = "button" name="button" id="Twitter" onclick="googlesignin()">Login With Gooogle</button>
-
-</form>
+        </form>
 <body>
 <script>
 var paragraph = document.getElementsByTagName('p')[0];
@@ -358,8 +356,7 @@ textEffect('fly-in-out');
 }
 </script>
 <script>
-    
-  var googleProvider = new firebase.auth.GoogleAuthProvider();
+    var googleProvider = new firebase.auth.GoogleAuthProvider();
   function googlesignin(){
     console.log('google signInWithPopup')
     firebase.auth().signInWithPopup(googleProvider)
@@ -374,13 +371,12 @@ textEffect('fly-in-out');
       var credential = error.credential;
     });
   }
-    
-
-</script>
+  </script>
 <script>
 firebase.auth().onAuthStateChanged(user => {
   if(user) {
-    window.location = 'https://www.facebook.com/';
+     console.log(user)
+    window.location.href = 'http://localhost:3000/index.html';
   }
 });
 </script>

@@ -39,5 +39,14 @@
 }
 
 </script>
+
+<script>
+firebase.auth().onAuthStateChanged(user => {
+  if(!user) {
+    console.log(user)
+    window.location.href = 'http://localhost:3000/index1.html';
+  }
+});
+</script>
 	</body>
 	</html>

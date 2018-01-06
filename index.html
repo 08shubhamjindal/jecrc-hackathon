@@ -88,5 +88,27 @@
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+      <script>
+  var config = {
+    apiKey: "AIzaSyDH5RjNjEl-8HvcDrQQI7Dua1wECBTVnM8",
+    authDomain: "pwds-24c6c.firebaseapp.com",
+    databaseURL: "https://pwds-24c6c.firebaseio.com",
+    projectId: "pwds-24c6c",
+    storageBucket: "pwds-24c6c.appspot.com",
+    messagingSenderId: "1010710973369"
+  };
+
+  firebase.initializeApp(config);
+  </script>
+
+      <script>
+firebase.auth().onAuthStateChanged(user => {
+  if(!user) {
+    console.log(user)
+    window.location.href = 'http://localhost:3000/index1.html';
+  }
+});
+</script>
     </body>
   </html>

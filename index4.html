@@ -367,7 +367,8 @@ textEffect('fly-in-out');
     <script>
 firebase.auth().onAuthStateChanged(user => {
   if(user) {
-    window.location = 'https://www.facebook.com/';
+     console.log(user)
+    window.location.href = 'http://localhost:3000/index.html';
   }
 });
 </script>
