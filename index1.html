@@ -126,6 +126,97 @@ after { clear: both; }
   width: 235px !important;
   height: 50px !important;
 }
+@import url("https://fonts.googleapis.com/css?family=Titan+One");
+
+html, body {
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Titan One', Helvetica, Arial;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  display: table;
+}
+body {
+  background: -moz-radial-gradient(center, ellipse cover, rgba(13,117,117,0) 0%, rgba(13,117,117,0.1) 30%, rgba(13,117,117,0.5) 100%); /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(13,117,117,0)), color-stop(30%,rgba(13,117,117,0.1)), color-stop(100%,rgba(13,117,117,0.5))); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(13,117,117,0) 0%,rgba(13,117,117,0.1) 30%,rgba(13,117,117,0.5) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover, rgba(13,117,117,0) 0%,rgba(13,117,117,0.1) 30%,rgba(13,117,117,0.5) 100%); /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover, rgba(13,117,117,0) 0%,rgba(13,117,117,0.1) 30%,rgba(13,117,117,0.5) 100%); /* IE10+ */
+  background: radial-gradient(ellipse at center, rgba(13,117,117,0) 0%,rgba(13,117,117,0.1) 30%,rgba(13,117,117,0.5) 100%); /* W3C */
+}
+p {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 5em;
+  letter-spacing: .2em;
+}
+i {
+  display: inline-block;
+  font-style: normal;
+  color: rgba(17, 167, 167, 0.6);
+  -webkit-transform: translate(0px, -100px) scale(1.1);
+     -moz-transform: translate(0px, -100px) scale(1.1);
+     -o-transform: translate(0px, -100px) scale(1.1);
+      transform: translate(0px, -100px) scale(1.1);
+  text-shadow: 2px 2px 0 rgb(13, 117, 117),
+    2px 100px 20px rgba(0, 0, 0, 0.05);
+}
+
+i.floaty {
+  -webkit-animation: float 3s infinite ease-in-out;
+     -moz-animation: float 3s infinite ease-in-out;
+     -o-animation: float 3s infinite ease-in-out;
+      animation: float 3s infinite ease-in-out;
+}
+
+@-webkit-keyframes float {
+  0% {
+    -webkit-transform: translate(0px, -100px) scale(1.1);
+    text-shadow: 2px 2px 0 rgb(13, 117, 117),
+      2px 100px 20px rgba(0, 0, 0, 0.05);
+  }
+  50% {
+    -webkit-transform: translate(0px, 0px) scale(0.9);
+    text-shadow: 2px 2px 0 rgb(13, 117, 117),
+      2px 10px 5px rgba(0, 0, 0, 0.2);
+  }
+}
+@-moz-keyframes float {
+  0% {
+    -moz-transform: translate(0px, -100px) scale(1.1);
+    text-shadow: 2px 2px 0 rgb(13, 117, 117),
+      2px 100px 20px rgba(0, 0, 0, 0.05);
+  }
+  50% {
+    -moz-transform: translate(0px, 0px) scale(0.9);
+    text-shadow: 2px 2px 0 rgb(13, 117, 117),
+      2px 10px 5px rgba(0, 0, 0, 0.2);
+  }
+}
+@-o-keyframes float {
+  0% {
+    -o-transform: translate(0px, -100px) scale(1.1);
+    text-shadow: 2px 2px 0 rgb(13, 117, 117),
+      2px 100px 20px rgba(0, 0, 0, 0.05);
+  }
+  50% {
+    -o-transform: translate(0px, 0px) scale(0.9);
+    text-shadow: 2px 2px 0 rgb(13, 117, 117),
+      2px 10px 5px rgba(0, 0, 0, 0.2);
+  }
+}
+@-keyframes float {
+  0% {
+    transform: translate(0px, -100px) scale(1.1);
+    text-shadow: 2px 2px 0 rgb(13, 117, 117),
+      2px 100px 20px rgba(0, 0, 0, 0.05);
+  }
+  50% {
+    transform: translate(0px, 0px) scale(0.9);
+    text-shadow: 2px 2px 0 rgb(13, 117, 117),
+      2px 10px 5px rgba(0, 0, 0, 0.2);
+  }
 }
     </style>
 
@@ -138,15 +229,14 @@ after { clear: both; }
            <span class="fontawesome-lock"></span>
            <input type="password" id"pass" placeholder="Password">
          <center>  <input type="submit" value="Login"></center>
-           <p> OR</p>
+         <br><br/>
+      
      <span class="fontawesome-facebook"></span>
            <button type = "button" name="button" id="facebook" onclick="facebooksignin()">Login With Facebook</button>
            <br><br/>
            <span class="fontawesome-twitter"></span>
            <button type = "button" name="button" id="Twitter" onclick="googlesignin()">Login With Gooogle</button>
-       
-
-</form>
+       </form>
 <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
 <script>
   var config = {
@@ -188,6 +278,36 @@ firebase.auth().onAuthStateChanged(user => {
     window.location.href = 'http://localhost:3000/facebook.html';
   }
 });
+</script>
+<script>
+var paragraph = document.getElementsByTagName('p')[0],
+  text = paragraph.innerHTML,
+  chars = text.length,
+  newText = '',
+  char,
+  i;
+
+for (i = 0; i < chars; i += 1) {
+  newText += '<i>' + text.charAt(i) + '</i>';
+}
+
+paragraph.innerHTML = newText;
+
+var wrappedChars = document.getElementsByTagName('i'),
+  wrappedCharsLen = wrappedChars.length,
+  j = 0;
+
+function addFloat () {
+  setTimeout(function () {
+    wrappedChars[j].className = 'floaty';
+    j += 1;
+    if (j < wrappedCharsLen) {
+      addFloat();
+    }
+  }, 100)
+}
+
+addFloat();
 </script>
 
 </body>
