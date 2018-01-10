@@ -1,6 +1,7 @@
  <!DOCTYPE html>
   <html>
     <head>
+      <title>USER</title>
      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -11,15 +12,38 @@
      img{
       width :100%;
      }
+footer
+{
+  color: white;
+}
+.nav-wrapper
+{
+  padding-left: 70px;
+  }
+#logo
+{
+  font-family: Comic;
+   font-size: 40px;
+}
 
      </style>
     </head>
   <body>
-  <nav>
+  
+
+
+    <nav>
     <div class="nav-wrapper black">
-    <a href="" class="brand-logo">ABLE</a>
+    <a href="" id= "logo"> ABLE</a>
+    <!---
+ <ul id="nav-mobile" class="right ">
+<li><a class="waves-effect waves-light btn-large red" href="https://08shubhamjindal.github.io/jecrc-hackathon/index3.html">Log In</a></li>
+<li><a class="waves-effect waves-light btn-large" href="https://08shubhamjindal.github.io/jecrc-hackathon/index4.html">Sign Up</a></li>
+    </ul>
+    ---->
   </div>
 </nav>
+
 <div class="col s6 m7">
   <div id="overview">
       <div class="card horizontal white darken-1">
@@ -31,10 +55,11 @@
           <p><strong>Company Name:</strong>Indian Oil Corporation Limited</p>
           <p><strong>Post:</strong>Junior Quality Control Assistant</p>
           <p><strong>Place:</strong>Barauni</p>
-          <p><strong>Disability:</strong>Deaf</p>
+            <p><strong>Disability:</strong>Deaf</p>
         </div>
         <div class="card-action">
-              <a href="#">Add Application Status</a>
+         <a href="#">INFO</a>
+              <a href="http://www.jobsfordeaf.nic.in/My_App/ShowJob.aspx?JobID=4EC19EAF-8884-4397-8014-FCD859AA6D55%3E">APPLY</a>
           </div>
       </div>
     </div>
@@ -51,10 +76,11 @@
           <p><strong>Company Name:</strong>Rashtriya Military School</p>
           <p><strong>Post:</strong>Mali - MTS</p>
           <p><strong>Place:</strong>Chail, Himachal Pradesh</p>
-         <p><strong>Disability:</strong>Autism</p>
+          <p><strong>Disability:</strong>Autism</p>
         </div>
         <div class="card-action">
-              <a href="#">Add Application Status</a>
+         <a href="#">INFO</a>
+              <a href="http://www.jobsfordeaf.nic.in/My_App/ShowJob.aspx?JobID=74D7FCB1-4922-4F6A-BD4E-36AAEB56C8E7%3E">APPLY</a>
           </div>
       </div>
     </div>
@@ -72,10 +98,11 @@
           <p><strong>Company Name:</strong>Food Corporation of India</p>
           <p><strong>Post:</strong>Watchman cat-iv</p>
           <p><strong>Place:</strong>Ahmedabad</p>
-        <p><strong>Disability:</strong>Haring Imapirments</p>
+           <p><strong>Disability:</strong>Haring Imapirments</p>
         </div>
         <div class="card-action">
-              <a href="#">Add Application Status</a>
+        <a href="#">INFO</a>
+              <a href="http://www.jobsfordeaf.nic.in/My_App/ShowJob.aspx?JobID=B94AD5B3-0987-4DC9-8ADD-A4067F1B0796%3E">APPLY</a>
           </div>
       </div>
     </div>
@@ -91,10 +118,12 @@
            <p><strong>Company Name:</strong>CSIR Nationa Botanical Research Institute</p>
           <p><strong>Post:</strong>Scientist</p>
           <p><strong>Place:</strong>Lucknow</p>
-         <p><strong>Disability:</strong>Visual Impariments</p>
+           <p><strong>Disability:</strong>Visual Impariments</p>
         </div>
         <div class="card-action">
-              <a href="#">Add Application Status</a>
+         
+              <a href="#">INFO</a>
+              <a href="http://www.jobsfordeaf.nic.in/My_App/ShowJob.aspx?JobID=9DCE11F0-5948-4254-B99D-D4E578D02DE0%3E">APPLY</a>
           </div>
       </div>
     </div>
@@ -110,10 +139,12 @@
            <p><strong>Company Name:</strong>Airports Authority of India</p>
           <p><strong>Post:</strong>Junior Assistant</p>
           <p><strong>Place:</strong>New Delhi</p>
-         <p><strong>Disability:</strong>Cerebral palsy</p>
+              <p><strong>Disability:</strong>Cerebral palsy</p>
         </div>
         <div class="card-action">
-              <a href="#">Add Application Status</a>
+         
+              <a href="#">INFO</a>
+              <a href="http://www.jobsfordeaf.nic.in/My_App/ShowJob.aspx?JobID=063D584C-0ECA-4DAE-A046-DC331E5F2BB6%3E">APPLY</a>
           </div>
       </div>
     </div>
@@ -147,33 +178,14 @@
   </script>
         <script>
 firebase.auth().onAuthStateChanged(user => {
-  if(user) {
-    window.location.href = 'https://08shubhamjindal.github.io/jecrc-hackathon/signout.html';
+  if(!user) {
+    window.location.href = 'http://localhost:3000/signup.html';
   } 
 })
 </script>
-<script>
-$( document ).ready(function() {
 
-$( ".cross" ).hide();
-$( ".menu" ).hide();
-$( ".hamburger" ).click(function() {
-$( ".menu" ).slideToggle( "slow", function() {
-$( ".hamburger" ).hide();
-$( ".cross" ).show();
-});
-});
-
-$( ".cross" ).click(function() {
-$( ".menu" ).slideToggle( "slow", function() {
-$( ".cross" ).hide();
-$( ".hamburger" ).show();
-});
-});
-
-});
-</script>
 <center>
-<footer id="foot"><a href="https://08shubhamjindal.github.io/jecrc-hackathon/index4.html">Sign Up as Client</a></footer>
- </center>   </body>
+<footer id="foot"><a href="http://localhost:3000/signup.html">Sign Up as Client</a></footer>
+ </center> 
+ </body>
   </html>

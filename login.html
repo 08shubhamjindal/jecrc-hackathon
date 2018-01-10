@@ -1,13 +1,12 @@
-5<html lang="en-US">
+<html lang="en-US">
 <head>
   <meta charset="utf-8">
-    <title>Signup</title>
+    <title>Login</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700">
     <style>
     @charset "utf-8";
-    @import url(http://weloveiconfonts.com/api/?family=fontawesome);
-
-   [class*="fontawesome-"]:before {
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+[class*="fontawesome-"]:before {
   font-family: 'FontAwesome', sans-serif;
 }
 
@@ -58,7 +57,7 @@ after { clear: both; }
   line-height: 50px;
   text-align: center;
   width: 50px;
-  height: 50px;
+  height: 50px;company.
 }
 
 #login form input[type="text"] {
@@ -84,6 +83,19 @@ after { clear: both; }
 #login form input[type="submit"] {
   background: #b5cd60;
   border: 0;
+  width: 100%;
+  height: 40px;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+#login form input[type="submit"]:hover {
+  background: #16aa56;
+}
+#login form input[type="submit"] {
+  background: #b5cd60;
+  border: 0;
   width: 70%;
   height: 40px;
   border-radius: 3px;
@@ -105,7 +117,7 @@ after { clear: both; }
 }
 #twitter
 {
-    background:  #2d2d2d !important;
+    background: #00aced !important;
     border-radius: 0px 3px 3px 0px !important;
    color: #a9a9a9 !important;
   margin-bottom: 1em !important;
@@ -125,17 +137,16 @@ html, body {
   display: table;
 }
 html {
-  /* subtlepatterns.com */
   background: url("http://neilcarpenter.com/demos/asfalt.png") repeat;
 }
 body {
   overflow: hidden; 
-  background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%, rgba(0,0,0,0.44) 100%); /* FF3.6+ */
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.44))); /* Chrome,Safari4+ */
-  background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%,rgba(0,0,0,0.44) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%,rgba(0,0,0,0.44) 100%); /* Opera 12+ */
-  background: -ms-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%,rgba(0,0,0,0.44) 100%); /* IE10+ */
-  background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%,rgba(0,0,0,0.44) 100%); /* W3C */
+  background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%, rgba(0,0,0,0.44) 100%); 
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.44))); 
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%,rgba(0,0,0,0.44) 100%);
+  background: -o-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%,rgba(0,0,0,0.44) 100%);
+  background: -ms-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%,rgba(0,0,0,0.44) 100%);
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%,rgba(0,0,0,0.44) 100%);
 }
 p {
   display: table-cell;
@@ -251,33 +262,36 @@ i.fly-in-out {
     border-radius: 50%;
   }
 }
+#s{
+  font-size: 10px;
+  color: #ffffff;
+}
     </style>
 
 </head>
-<p>ABLE- THE HELP BEYOND </p>
+ <p>ABLE-
+  THE HELP BEYOND</p>
     <div id="login">
       <form name='form-login'>
         <span class="fontawesome-user"></span>
-          <input type="text" id="user" placeholder="UserName or Email">
+          <input type="text" id="user" placeholder="Username">
            <span class="fontawesome-lock"></span>
-        <input type="password" id"pass" placeholder="Password">
-            <span class="fontawesome-lock"></span>
-           <input type="password" id"pass" placeholder=" Retype Password">
-           <span class="fontawesome-phone "></span>
-           <input type="text" id="user" placeholder="Contact No">
-           <center><input type="submit" value="Register"></center>
-  <p> OR</p>
-             <span class="fontawesome-facebook"></span>
-          <button type = "button" name="button" id="facebook" onclick="facebooksignin()">Signup With Facebook</button>
+           <input type="password" id"pass" placeholder="Password">
+         <center>  <input type="submit" value="Login"></center>
+           <p> OR</p>
+     <span class="fontawesome-facebook"></span>
+         <button type = "button" name="button" id="facebook" onclick="facebooksignin()">Login With Facebook</button>
            <br><br/>
            <span class="fontawesome-google-plus-sign"></span>
-          <button type = "button" name="button" id="Twitter" onclick="googlesignin()">Signup With Gooogle</button>
+          <button type = "button" name="button" id="Twitter" onclick="googlesignin()">Login With Gooogle</button>
+          <br><br/>
+          <strong><a id="s" href="https://08shubhamjindal.github.io/jecrc-hackathon/index3.html">Log In  as Client</a></strong>
 
-
-</form>
+        </form>
 <body>
 <script>
 var paragraph = document.getElementsByTagName('p')[0];
+
 function textEffect(animationName) {
   var text = paragraph.innerHTML,
     chars = text.length,
@@ -310,6 +324,7 @@ function textEffect(animationName) {
 };
 
 textEffect('fly-in-out');
+
 </script>
 <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
 <script>
@@ -321,6 +336,8 @@ textEffect('fly-in-out');
     storageBucket: "pwds-24c6c.appspot.com",
     messagingSenderId: "1010710973369"
   };
+
+  
 
   firebase.initializeApp(config);
 
@@ -347,8 +364,7 @@ textEffect('fly-in-out');
 }
 </script>
 <script>
-    
-  var googleProvider = new firebase.auth.GoogleAuthProvider();
+    var googleProvider = new firebase.auth.GoogleAuthProvider();
   function googlesignin(){
     console.log('google signInWithPopup')
     firebase.auth().signInWithPopup(googleProvider)
@@ -363,14 +379,16 @@ textEffect('fly-in-out');
       var credential = error.credential;
     });
   }
-    </script>
-    <script>
+  </script>
+<script>
 firebase.auth().onAuthStateChanged(user => {
   if(user) {
      console.log(user)
-    window.location.href = 'https://08shubhamjindal.github.io/jecrc-hackathon/signout.html';
+    window.location.href = 'http://localhost:3000/signout.html';
   }
 });
 </script>
+
+
 </body>
 </html>
