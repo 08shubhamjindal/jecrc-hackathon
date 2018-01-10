@@ -1,0 +1,84 @@
+ <!DOCTYPE html>
+  <html>
+    <head>
+      <title>company</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     </head>
+     	<body>
+     		<pre id="object"></pre>
+     		<ul id="list"></ul>
+
+     		<!---
+     		INFO1 : <input type="text" id="info1"><br>
+     		INFO2 : <input type="text" id="info2"><br>
+     		<button id="save_button">SAVE</button>
+     		<button id="clear_button">clear</button>
+     		<button id="load_button">load</button>
+     		---->
+ <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+<script>
+  var config = {
+    apiKey: "AIzaSyDH5RjNjEl-8HvcDrQQI7Dua1wECBTVnM8",
+    authDomain: "pwds-24c6c.firebaseapp.com",
+    databaseURL: "https://pwds-24c6c.firebaseio.com",
+    projectId: "pwds-24c6c",
+    storageBucket: "pwds-24c6c.appspot.com",
+    messagingSenderId: "1010710973369"
+  };
+  firebase.initializeApp(config);
+  const preObject = document.getElementById('object');
+  const ulList = document.getElementById('list');
+
+
+  const dbRefObject = firebase.database().ref().child('object');
+  const dbRefList = dbRefObject.child('hobbies');
+
+
+
+
+
+  dbRefObject.on('value', snap=> {
+  	preObject.innertext = JSON.stringify(snap.val() , null , 3);
+  });
+
+
+
+
+
+  dbRefObject.on('child_added' , snap => {
+  	const li = document.createElement('li');
+  	li.innertext = snap.val();
+  	li.id = snap.key;
+  	ulList.appendChild(li);
+  });
+
+
+
+
+
+  dbRefObject.on('child_changed' , snap=>{
+  	const liChanged = document.getElementById(snap.key);
+  	liChanged.innertext = snap.val();
+  });
+
+  dbRefObject.on('child_removed' , snap=> {
+       const liToRemove = document.getElementById(snap.key);
+       liToRemove.remove();
+  })
+ /*
+   firebase.initializeApp(config);
+   var rootRef = firebase.database().ref().child('infos');
+   $('#save_button').click(function(){
+   	rootRef.set({
+   		info1:$('#info1').val(),
+   		info2:$('#info2').val()
+   	});
+   });
+ */
+
+
+  </script>
+
+     	</body>
+     	</html>

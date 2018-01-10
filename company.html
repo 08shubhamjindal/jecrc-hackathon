@@ -28,6 +28,12 @@
   <nav>
     <div class="nav-wrapper black">
   <a href="" id= "logo"> ABLE</a>
+  <ul id="nav-mobile" class="right hide-on-med-and-down ">
+<li><a class="waves-effect waves-light btn-large" onclick="facebooksignout()">Sign Out</a></li>
+    </ul>
+    <ul id="nav-mobile" class="right hide-on-med-and-down ">
+<li><a href="http://localhost:3000/client.html" class="waves-effect waves-light btn-large">Post a Job</a></li>
+    </ul>
   </div>
 </nav>
 <div class="col s6 m7">
@@ -43,9 +49,6 @@
           <p><strong>Place:</strong>Barauni</p>
           <p><strong>Disability:</strong>Deaf</p>
         </div>
-        <div class="card-action">
-              <a href="#">Add Application Status</a>
-          </div>
       </div>
     </div>
  </div>
@@ -63,9 +66,6 @@
           <p><strong>Place:</strong>Chail, Himachal Pradesh</p>
          <p><strong>Disability:</strong>Autism</p>
         </div>
-        <div class="card-action">
-              <a href="#">Add Application Status</a>
-          </div>
       </div>
     </div>
   </div>
@@ -84,9 +84,6 @@
           <p><strong>Place:</strong>Ahmedabad</p>
         <p><strong>Disability:</strong>Haring Imapirments</p>
         </div>
-        <div class="card-action">
-              <a href="#">Add Application Status</a>
-          </div>
       </div>
     </div>
   </div>
@@ -103,9 +100,6 @@
           <p><strong>Place:</strong>Lucknow</p>
          <p><strong>Disability:</strong>Visual Impariments</p>
         </div>
-        <div class="card-action">
-              <a href="#">Add Application Status</a>
-          </div>
       </div>
     </div>
   </div>
@@ -122,9 +116,6 @@
           <p><strong>Place:</strong>New Delhi</p>
          <p><strong>Disability:</strong>Cerebral palsy</p>
         </div>
-        <div class="card-action">
-              <a href="#">Add Application Status</a>
-          </div>
       </div>
     </div>
   </div>
@@ -154,6 +145,12 @@
   };
 
   firebase.initializeApp(config);
+  function facebooksignout()
+{
+  firebase.auth().signOut().then(function() {
+  }).catch(function(error) {
+});
+}
   </script>
         <script>
 firebase.auth().onAuthStateChanged(user => {
@@ -161,27 +158,6 @@ firebase.auth().onAuthStateChanged(user => {
     window.location.href = 'http://localhost:3000/signup.html';
   } 
 })
-</script>
-<script>
-$( document ).ready(function() {
-
-$( ".cross" ).hide();
-$( ".menu" ).hide();
-$( ".hamburger" ).click(function() {
-$( ".menu" ).slideToggle( "slow", function() {
-$( ".hamburger" ).hide();
-$( ".cross" ).show();
-});
-});
-
-$( ".cross" ).click(function() {
-$( ".menu" ).slideToggle( "slow", function() {
-$( ".cross" ).hide();
-$( ".hamburger" ).show();
-});
-});
-
-});
 </script>
   </body>
   </html>
