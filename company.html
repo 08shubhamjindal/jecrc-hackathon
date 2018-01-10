@@ -12,13 +12,22 @@
      img{
       width :100%;
      }
+.nav-wrapper
+{
+  padding-left: 70px;
+  }
+#logo
+{
+  font-family: Comic;
+   font-size: 40px;
+}
 
      </style>
     </head>
   <body>
   <nav>
     <div class="nav-wrapper black">
-    <a href="" class="brand-logo">ABLE</a>
+  <a href="" id= "logo"> ABLE</a>
   </div>
 </nav>
 <div class="col s6 m7">
@@ -148,8 +157,8 @@
   </script>
         <script>
 firebase.auth().onAuthStateChanged(user => {
-  if(user) {
-    window.location.href = 'https://08shubhamjindal.github.io/jecrc-hackathon/signout.html';
+  if(!user) {
+    window.location.href = 'http://localhost:3000/signup.html';
   } 
 })
 </script>

@@ -16,6 +16,15 @@ footer
 {
   color: white;
 }
+.nav-wrapper
+{
+  padding-left: 70px;
+  }
+#logo
+{
+  font-family: Comic;
+   font-size: 40px;
+}
 
      </style>
     </head>
@@ -25,11 +34,13 @@ footer
 
     <nav>
     <div class="nav-wrapper black">
-    <a href="" class="brand-logo">ABLE</a>
-    <ul id="nav-mobile" class="right ">
+    <a href="" id= "logo"> ABLE</a>
+    <!---
+ <ul id="nav-mobile" class="right ">
 <li><a class="waves-effect waves-light btn-large red" href="https://08shubhamjindal.github.io/jecrc-hackathon/index3.html">Log In</a></li>
 <li><a class="waves-effect waves-light btn-large" href="https://08shubhamjindal.github.io/jecrc-hackathon/index4.html">Sign Up</a></li>
     </ul>
+    ---->
   </div>
 </nav>
 
@@ -167,34 +178,14 @@ footer
   </script>
         <script>
 firebase.auth().onAuthStateChanged(user => {
-  if(user) {
-    window.location.href = 'https://08shubhamjindal.github.io/jecrc-hackathon/signout.html';
+  if(!user) {
+    window.location.href = 'http://localhost:3000/signup.html';
   } 
 })
 </script>
-<script>
-$( document ).ready(function() {
 
-$( ".cross" ).hide();
-$( ".menu" ).hide();
-$( ".hamburger" ).click(function() {
-$( ".menu" ).slideToggle( "slow", function() {
-$( ".hamburger" ).hide();
-$( ".cross" ).show();
-});
-});
-
-$( ".cross" ).click(function() {
-$( ".menu" ).slideToggle( "slow", function() {
-$( ".cross" ).hide();
-$( ".hamburger" ).show();
-});
-});
-
-});
-</script>
 <center>
-<footer id="foot"><a href="https://08shubhamjindal.github.io/jecrc-hackathon/index4.html">Sign Up as Client</a></footer>
+<footer id="foot"><a href="http://localhost:3000/signup.html">Sign Up as Client</a></footer>
  </center> 
  </body>
   </html>
